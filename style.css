@@ -9,7 +9,10 @@ h1 {
     font-size: 2rem;
     padding: 1rem 0;
 }
-
+h1:hover{
+    transition: all 0.3s ease;
+    font-size: 2.2rem;
+}
 h2 {
     color: dodgerblue;
 }
@@ -22,7 +25,10 @@ img {
     width: 100%;
     height: auto;
 }
-
+img:hover{
+    transition: all 0.3s ease;
+    transform: scale(1.2);
+}
 ul {
     margin: 0;
     padding: 0;
@@ -61,7 +67,10 @@ input[type=radio] {
     max-width: 70%;
     font-size: 1rem;
 }
-
+.accordion-title:hover{
+    font-size: 1.2rem;
+    transition: all 0.3s ease;
+}
 .accordion-content {
     overflow: hidden;
     width: 30%;
@@ -74,15 +83,18 @@ input[type=radio] {
 @keyframes fadeIn {
     from {
         opacity: 0;
+        width: 10%;
     }
     to {
         opacity: 1;
+        width: 30%;
     }
 }
 
 .accordion-items:hover .accordion-content {
     display: block;
 }
+
 
 /*                    close button                                        */
 .close {
@@ -94,12 +106,11 @@ input[type=radio] {
     background-color: transparent;
     cursor: pointer;
     position: relative;
-    animation: fadeIn 1s ease-in-out;
 }
 
 .close:hover {
-    width: 1.3rem;
-    height: 1.3rem;
+    transition: all 0.3s ease;
+    transform: scale(1.2);
 }
 
 .accordion-container:hover .close {
