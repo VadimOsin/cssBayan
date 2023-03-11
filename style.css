@@ -10,7 +10,12 @@ h1 {
     font-size: 2rem;
     padding: 1rem 0;
 }
-
+h2{
+    color: dodgerblue;
+}
+.accordion-container:hover h2{
+    color: black;
+}
 img {
     width: 100%;
     height: auto;
@@ -25,7 +30,9 @@ ul {
 input[type=radio] {
     display: none;
 }
-
+.accordion-container input:checked ~ .accordion-header .header__close h2 {
+   color: black;
+}
 .accordion-container input:checked ~ .accordion-content {
     display: block;
 }
@@ -56,8 +63,18 @@ input[type=radio] {
     width: 30%;
     margin: 1rem auto;
     display: none;
+    opacity: 1;
+    animation: fadeIn 1.5s ease-in-out;
 }
 
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
 .accordion-items:hover .accordion-content {
     display: block;
 }
@@ -72,8 +89,12 @@ input[type=radio] {
     background-color: transparent;
     cursor: pointer;
     position: relative;
+    animation: fadeIn 1s ease-in-out;
 }
-
+.close:hover{
+    width: 1.3rem;
+    height: 1.3rem;
+}
 .accordion-container:hover .close {
     display: block;
 }
